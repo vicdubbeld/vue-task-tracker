@@ -1,7 +1,7 @@
 <template>
 <div class="container">
   <Header title="Task Tracker" />
-  <Tasks @delete-task="deleteTask" :tasks="tasks" />
+  <Tasks @toggle-reminder="toggleReminder" @delete-task="deleteTask" :tasks="tasks" />
   </div>
 </template>
 
@@ -26,6 +26,14 @@ export default {
       if(confirm('Are you sure?')){
       this.tasks = this.tasks.filter((task) => task.id !== id)
       }
+    },
+    toggleReminder(id) {
+      // toggling green highlighting to toggle reminder as either true or false
+      // return array of updated tasks
+      // for each task, check to see if task.id = the id passed in. 
+      // If it is, return array of objects where we change the reminder to the opposite of whatever the current task reminder is set to
+      // else, return initial task
+      this.tasks = this.tasks.map((task) => task.id === id ? {...task, reminder: !task.reminder} : task)
     },
   },
   created() {
