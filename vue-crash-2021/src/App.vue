@@ -8,6 +8,7 @@
 <script>
 import Header from './components/Header'
 import Tasks from './components/Tasks'
+
 export default {
   name: 'App',
   components: {
