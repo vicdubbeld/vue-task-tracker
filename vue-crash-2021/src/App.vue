@@ -54,13 +54,25 @@ export default {
       
       }
     },
-    toggleReminder(id) {
+    async toggleReminder(id) {
+      const taskToToggle = await this.fetchTask(id)
+      const updTask = {...taskToToggle, reminder: !taskToToggle.reminder}
+
+      const res = await fetch(`api/tasks/${id}`, {
+        method: 'PUT',
+        headers: {
+          'Content-type': 'application/json'
+        },
+        body: JSON.stringify(updTask)
+      })
+
+      const data = await res.json()
       // toggling green highlighting to toggle reminder as either true or false
       // return array of updated tasks
       // for each task, check to see if task.id = the id passed in. 
       // If it is, return array of objects where we change the reminder to the opposite of whatever the current task reminder is set to
       // else, return initial task
-      this.tasks = this.tasks.map((task) => task.id === id ? {...task, reminder: !task.reminder} : task)
+      this.tasks = this.tasks.map((task) => task.id === id ? {...task, reminder: data.reminder} : task)
     },
     async fetchTasks() {
       const res = await fetch('api/tasks')
