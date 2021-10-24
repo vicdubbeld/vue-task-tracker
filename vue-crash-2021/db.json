@@ -23,6 +23,12 @@
       "day": "Saturday at 6:30pm",
       "reminder": true,
       "id": "S5z6Woo"
+    },
+    {
+      "text": "Test",
+      "day": "4pm",
+      "reminder": false,
+      "id": "qPMIk2p"
     }
   ]
 }
