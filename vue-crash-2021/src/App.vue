@@ -2,6 +2,7 @@
   <div class="container">
     <Header @toggle-add-task="toggleAddTask" title="Task Tracker" :showAddTask="showAddTask"/>
     
+    <!-- any other components you want to show on every page can go here-->
     <router-view :showAddTask="showAddTask"></router-view>
     <Footer />
   </div>
