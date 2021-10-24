@@ -35,6 +35,12 @@
       "day": "4pm",
       "reminder": false,
       "id": "76BM09z"
+    },
+    {
+      "text": "New Task",
+      "day": "fsdfsd",
+      "reminder": true,
+      "id": "ND47Gy5"
     }
   ]
 }
