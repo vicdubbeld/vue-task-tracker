@@ -29,6 +29,12 @@
       "day": "4pm",
       "reminder": false,
       "id": "qPMIk2p"
+    },
+    {
+      "text": "Test 2",
+      "day": "4pm",
+      "reminder": false,
+      "id": "76BM09z"
     }
   ]
 }
