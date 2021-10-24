@@ -21,26 +21,8 @@
     {
       "text": "Get Chicken Sandwich",
       "day": "Saturday at 6:30pm",
-      "reminder": true,
+      "reminder": false,
       "id": "S5z6Woo"
-    },
-    {
-      "text": "Test",
-      "day": "4pm",
-      "reminder": false,
-      "id": "qPMIk2p"
-    },
-    {
-      "text": "Test 2",
-      "day": "4pm",
-      "reminder": false,
-      "id": "76BM09z"
-    },
-    {
-      "text": "New Task",
-      "day": "fsdfsd",
-      "reminder": true,
-      "id": "ND47Gy5"
     }
   ]
 }
